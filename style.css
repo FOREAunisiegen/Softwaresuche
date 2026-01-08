@@ -1,0 +1,154 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3e5c39; /* Waldgrün */
+  color: #f0f0f0; /* Helles Grau für Text */
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+button {
+  background-color: #8b5e3c; /* Walnussbraun */
+  color: #fff;
+  border: 2px solid #6d4c41; /* Dunkles Braun */
+  padding: 12px 25px;
+  margin: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #6d4c41; /* Dunkles Braun */
+  transform: translateY(-3px);
+}
+
+button:active {
+  background-color: #4e342e; /* Sehr dunkles Braun */
+  transform: translateY(1px);
+}
+
+#question-container {
+  margin: 30px auto;
+  width: 70%;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1); /* Leichte Transparenz */
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #6d4c41; /* Dunkles Braun */
+}
+
+#result-table {
+  margin: 30px auto;
+  width: 85%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.1); /* Leichte Transparenz */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#result-table th, #result-table td {
+  border: 1px solid #f5f5f5;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#result-table th {
+  background-color: #8b5e3c; /* Walnussbraun */
+  color: #fff;
+}
+
+#result-table td {
+  background-color: #4e5d4e; /* Moosgrün */
+  color: #f0f0f0;
+}
+
+table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  color: #f0f0f0;
+}
+
+th, td {
+  border: 1px solid #f5f5f5;
+  padding: 12px;
+}
+
+th {
+  background-color: #8b5e3c; /* Walnussbraun */
+  color: white;
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1, h2, h3 {
+    font-size: 20px;
+  }
+
+  #question-container,
+  #result-table {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 100%;
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  #result-table th, #result-table td {
+    font-size: 55%;
+    padding: 1%;
+  }
+
+  #result-table {
+    overflow-x: auto;
+  }
+
+  /* Tabellenlayout optimieren */
+  #result-table th, #result-table td {
+    /*white-space: nowrap;*/
+  }
+
+  #start-screen p {
+    font-size: 16px;
+  }
+
+  #answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Buttons im Ergebnisbereich */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Tabelle scrollbar machen */
+  #result-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

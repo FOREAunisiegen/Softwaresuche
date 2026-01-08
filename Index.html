@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Softwaresuche</title>
+	  <link rel="stylesheet" href="style.css">  
+	</head>
+	<body>
+  		<div id="app">
+   	 <!-- Startseite -->
+   	 <div id="start-screen">
+   	   <h1>Willkommen zur Softwaresuche!</h1>
+   	   <p>
+				Dieses Programm hilft Ihnen, passende Apps für Ihre Bedürfnisse zu finden.<br>
+				Beantworten Sie nur wenige Fragen, und wir zeigen Ihnen relevante Software.<br><br>
+				Hierbei handelt es sich um einen Prototypen. <br>
+   	   </p>
+   	 <button id="start-button">Start</button>
+   	</div>
+
+    	<!-- Frage- und Ergebnisbereich -->
+    	<div id="question-screen" style="display: none;">
+     		<div id="question-container">
+      	  <h2 id="question-text"></h2>
+      	  <div id="answers"></div>
+      	</div>
+      	<button id="back-button" style="display: none;">Eine Frage Zurück</button>
+    	</div>
+
+    	<!-- Ergebnisbereich -->
+		<div id="result-screen" style="display: none;">
+  			<!-- Container für Buttons -->
+  			<div class="button-container">
+    		<button id="reset-button">Zur Ersten Frage Zurück</button>
+  			</div>
+  			<h2>Ergebnisse</h2>
+  			<p>Mithilfe der Pfeile können Sie die Ergebnisse sortieren.<br>
+  			Klicken Sie auf den Link um zur Internetseite der Software zu kommen.</p>
+  			<table id="result-table">
+<thead>
+  <tr>
+    <th onclick="sortResults('Name')">Name ▲▼</th>
+    <th onclick="sortResults('Sprache')">Sprache ▲▼</th>
+    <th>Beschreibung</th>
+    <th onclick="sortResults('Nutzen')">Ökosystemleistung ▲▼</th>
+    <th>Link</th>
+  </tr>
+</thead>
+
+    			<tbody>
+      			<!-- Ergebnisse werden hier eingefügt -->
+    			</tbody>
+  			</table>
+		</div>
+	</body>
+	<script src="script.js"></script>
+	<script id="initLoader" src='https://cpstech.de/what2StudyLoader/?bot_id=QQmwZZMcZy&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGF0Ym90SWQiOiJRUW13WlpNY1p5IiwicHVycG9zZSI6ImNoYXRib3RJbnRlZ3JhdGlvbiIsImlhdCI6MTcxOTMyNDU0M30.5vAl7j5RDNpm0jVewAeo8dcaXbBeVDUec4t8s9fPsVk'></script>
+</html>
